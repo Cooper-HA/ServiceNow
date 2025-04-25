@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cd0e3501c39dda10ce31990ed4013137" label="Training Signup" max_length="40" name="x_1360076_staff_tr_training_signup" type="collection">
+        <element label="Date Requested" max_length="40" name="date_requested" type="glide_date"/>
+        <element label="Date Approved" max_length="40" name="date_approved" type="glide_date"/>
+        <element display="true" label="Schedule Details" max_length="1000" name="schedule_details" type="string"/>
+        <element label="Training Schedule" max_length="32" name="training_schedule" reference="x_1360076_staff_tr_training_schedule" type="reference"/>
+        <element choice="3" default="requested" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Denied" value="denied"/>
+                <element inactive_on_update="false" label="Completed" value="completed"/>
+                <element inactive_on_update="false" label="Approved" value="approved"/>
+                <element inactive_on_update="false" label="Requested" value="requested"/>
+            </choice>
+        </element>
+        <element label="Requested For" max_length="32" name="requested_for" reference="sys_user" type="reference"/>
+        <element label="Approved By" max_length="32" name="approved_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+        <index name="index2">
+            <element name="requested_for"/>
+        </index>
+        <index name="index3">
+            <element name="training_schedule"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="f86c3d4dc35dda10ce31990ed401315a" label="Training Schedule" max_length="40" name="x_1360076_staff_tr_training_schedule" type="collection">
+        <element label="Student Capacity" max_length="40" name="student_capacity" type="integer"/>
+        <element label="Schedule Details" max_length="1000" name="schedule_details" type="string"/>
+        <element choice="3" default="active" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Full" value="full"/>
+                <element inactive_on_update="false" label="Completed" value="completed"/>
+                <element inactive_on_update="false" label="Active" value="active"/>
+            </choice>
+        </element>
+        <element label="Signup Count" max_length="40" name="signup_count" type="integer"/>
+        <element label="Training Course" max_length="32" name="training_course" reference="x_1360076_staff_tr_training_course" type="reference"/>
+        <element label="Start Date" max_length="40" name="start_date" type="glide_date"/>
+        <element display="true" label="Title" max_length="40" name="title" type="string"/>
+        <element label="End Date" max_length="40" name="end_date" type="glide_date"/>
+        <index name="index">
+            <element name="training_course"/>
+        </index>
+    </element>
+</database>

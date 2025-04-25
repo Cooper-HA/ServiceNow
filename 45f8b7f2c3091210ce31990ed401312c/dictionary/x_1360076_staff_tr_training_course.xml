@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d7ad3ff6c3491210ce31990ed4013125" label="Training Course" max_length="40" name="x_1360076_staff_tr_training_course" type="collection">
+        <element label="Hours" max_length="20" name="hours" type="decimal"/>
+        <element display="true" label="Title" max_length="255" name="title" type="string_full_utf8"/>
+        <element label="Cost" max_length="20" name="cost" type="currency"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="3" default="active" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" value="active"/>
+                <element inactive_on_update="false" label="Inactive" value="inactive"/>
+            </choice>
+        </element>
+        <element label="Description" max_length="255" name="description" type="string_full_utf8"/>
+        <element label="Training Vendor" max_length="32" name="training_vendor" reference="x_1360076_staff_tr_training_vendor" type="reference"/>
+        <element label="Required Background" max_length="40" name="required_background" type="string"/>
+        <index name="index">
+            <element name="training_vendor"/>
+        </index>
+    </element>
+</database>
