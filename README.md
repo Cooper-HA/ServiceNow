@@ -16,3 +16,7 @@ Conducted thorough testing to ensure the application's reliability and performan
 
 Result:
 Successfully delivered a standalone ServiceNow application that met all specified requirements. The project demonstrated a strong understanding of ServiceNow's development tools and best practices, resulting in an application that is both functional and maintainable.
+
+
+NOTE:
+thses files are for you to import into your service now dev instance, they are not ment for viewing in github
